@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
@@ -18,10 +17,10 @@ const LoginPage = () => {
                     <input type="password" placeholder="password" className="input input-bordered" required />
                 </div>
                 <div className="form-control my-6">
-                    <button className="btn btn-primary">Login</button>
+                    <button className="btn normal-case font-medium text-lg bg-rose-500 hover:bg-rose-600 text-white ">Login</button>
                 </div>
             </form>
-            <h3>Don’t have an account? <Link className='font-medium' to="sign-up">Sign Up</Link></h3>
+            <h3>Don’t have an account? <Link className='font-semibold text-rose-500' to="sign-up">Sign Up</Link></h3>
         </div>
     );
 };
