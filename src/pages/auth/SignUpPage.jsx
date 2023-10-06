@@ -3,7 +3,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 import { useContext } from 'react';
 
 const SignUpPage = () => {
-    const { signUpUser } = useContext(AuthContext);
+    const { signUpUser, updateUser } = useContext(AuthContext);
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -17,6 +17,13 @@ const SignUpPage = () => {
 
         signUpUser(email, password)
             .then(result => {
+                updateUser(name, imgUrl)
+                    .then(result => {
+                        console.log(result.user);
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    })
                 console.log(result.user);
             })
             .catch(error => {
@@ -55,7 +62,7 @@ const SignUpPage = () => {
                     <button className="btn normal-case font-medium text-lg bg-rose-500 hover:bg-rose-600 text-white ">Sign Up</button>
                 </div>
             </form>
-            <h3>Already have an account? <Link className='font-semibold text-rose-500' to="login">Login</Link></h3>
+            <h3>Already have an account? <Link className='font-semibold text-rose-500' to="/login">Login</Link></h3>
         </div>
     );
 };
