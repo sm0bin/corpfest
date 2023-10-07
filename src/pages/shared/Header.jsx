@@ -1,13 +1,31 @@
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
+import { useContext } from "react";
 
 const Header = () => {
+
+    const { user, signOutUser } = useContext(AuthContext);
 
     const NavLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/login">Login</NavLink></li>
         <li><NavLink to="/sign-up">Sign Up</NavLink></li>
-        <li><NavLink to="/profile">Profile</NavLink></li>
+        {
+            user && <li><NavLink to="/profile">Profile</NavLink></li>
+        }
     </>
+
+
+    const handleLogout = () => {
+        signOutUser()
+            .then(result => {
+                console.log(result);
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+
 
     return (
         <div className="navbar bg-base-100">
@@ -27,9 +45,26 @@ const Header = () => {
                     {NavLinks}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn normal-case font-medium text-lg bg-rose-500 hover:bg-rose-600 text-white px-10">Login</a>
-            </div>
+
+            {
+                user ?
+                    <>
+                        <div className="flex items-center navbar-end gap-5">
+                            <Link to="/profile">
+                                <img className="w-10 h-10 object-cover rounded-full" src={user.photoURL} alt="" />
+                            </Link>
+                            <Link to="/profile">
+                                <h2 className="font-semibold capitalize">{user.displayName}</h2>
+                            </Link>
+                            <div className="">
+                                <button onClick={handleLogout} className="btn normal-case font-medium text-lg bg-rose-500 hover:bg-rose-600 text-white px-10">Logout</button>
+                            </div>
+                        </div>
+                    </> :
+                    <div className="navbar-end">
+                        <Link to="/login" className="btn normal-case font-medium text-lg bg-rose-500 hover:bg-rose-600 text-white px-10">Login</Link>
+                    </div>
+            }
         </div>
     );
 };
