@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useContext } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 const LoginPage = () => {
     const { signInUser, googleSignIn } = useContext(AuthContext);
@@ -17,6 +18,7 @@ const LoginPage = () => {
         signInUser(email, password)
             .then(result => {
                 console.log(result.user);
+                toast.success('Login Successful.')
                 navigate(location?.state ? location.state : '/');
 
             })
@@ -29,6 +31,7 @@ const LoginPage = () => {
     const handleGoogleSignIn = () => {
         googleSignIn()
             .then(result => {
+                toast.success('Login Successful.')
                 console.log(result.user);
                 navigate(location?.state ? location.state : '/');
             })
@@ -39,6 +42,7 @@ const LoginPage = () => {
 
     return (
         <div className='w-2/5 shadow-md mx-auto mt-16 p-16 rounded'>
+            <Toaster />
             <form onSubmit={handleLogin} className="card-body p-0">
                 <div className="form-control">
                     <label className="label">

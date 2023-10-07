@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useContext } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 const SignUpPage = () => {
     const { signUpUser, updateUser, googleSignIn } = useContext(AuthContext);
@@ -24,6 +25,7 @@ const SignUpPage = () => {
                     .catch(error => {
                         console.log(error);
                     })
+                toast.success('Sign Up Successful.')
                 console.log(result.user);
             })
             .catch(error => {
@@ -34,6 +36,7 @@ const SignUpPage = () => {
     const handleGoogleSignIn = () => {
         googleSignIn()
             .then(result => {
+                toast.success('Sign Up Successful.')
                 console.log(result.user);
             })
             .catch(error => {
@@ -43,6 +46,7 @@ const SignUpPage = () => {
 
     return (
         <div className='w-2/5 shadow-md mx-auto mt-16 p-16 rounded'>
+            <Toaster />
             <form onSubmit={handleRegister} className="card-body p-0">
                 <div className="form-control">
                     <label className="label">
