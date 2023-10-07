@@ -4,12 +4,17 @@ import LoginPage from "../pages/auth/LoginPage";
 import SignUpPage from "../pages/auth/SignUpPage";
 import Profile from "../pages/Profile";
 import PrivateRoute from "./PrivateRoute";
+import Home from "../pages/Home";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
         children: [
+            {
+                path: "/",
+                element: <Home></Home>,
+            },
             {
                 path: "/login",
                 element: <LoginPage></LoginPage>,
