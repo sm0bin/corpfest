@@ -6,6 +6,7 @@ import Profile from "../pages/Profile";
 import PrivateRoute from "./PrivateRoute";
 import Home from "../pages/Home";
 import ErrorPage from "../pages/ErrorPage";
+import ServiceDetails from "../pages/shared/ServiceDetails";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
             {
                 path: "/profile",
                 element: <PrivateRoute><Profile></Profile></PrivateRoute>,
+            },
+            {
+                path: "/service/:id",
+                element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
+                loader: () => fetch("/services2.json"),
             },
         ]
     },

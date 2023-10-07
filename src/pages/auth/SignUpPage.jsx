@@ -5,6 +5,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const SignUpPage = () => {
     const { signUpUser, updateUser, googleSignIn } = useContext(AuthContext);
+    const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=.*[!])(?!.*\s).{8,}$/;
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -14,6 +15,10 @@ const SignUpPage = () => {
         const imgUrl = formData.get('img-url');
         const email = formData.get('email');
         const password = formData.get('password');
+        if (!passwordPattern.test(password)) {
+            console.log("in");
+
+        }
         console.log(name, imgUrl, email, password);
 
         signUpUser(email, password)
