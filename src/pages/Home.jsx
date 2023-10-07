@@ -1,11 +1,15 @@
-import Accordion from "./shared/Accordion";
 import Carousel from "./shared/Carousel";
+import ServiceCards from "./shared/ServiceCards";
+import Faq from "./shared/Faq";
+import Stat from "./shared/Stat";
 
 const Home = () => {
     return (
         <div>
             <Carousel></Carousel>
-            <Accordion></Accordion>
+            <ServiceCards></ServiceCards>
+            <Stat></Stat>
+            <Faq></Faq>
         </div>
     );
 };

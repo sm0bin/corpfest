@@ -1,5 +1,7 @@
+import faqImage from "../../assets/faq-1.svg";
 
-const Accordion = () => {
+
+const Faq = () => {
     const faq = [
         {
             question: "How do I book your event management services?",
@@ -20,21 +22,31 @@ const Accordion = () => {
     ]
 
     return (
-        <div className="w-1/2">
-            {faq.map((item, index) => (
-                <div key={index} className="collapse collapse-arrow bg-base-200">
-                    <input type="radio" name="my-accordion-2" checked="checked" />
-                    <div className="collapse-title text-xl font-medium">
-                        {item.question}
-                    </div>
-                    <div className="collapse-content">
-                        <p>{item.answer}</p>
-                    </div>
-                </div>
+        <section className="my-24 grid grid-cols-1 lg:grid-cols-2">
+            <div className="flex h-full items-center justify-center">
+                <img className="w-10/12" src={faqImage} alt="" />
+            </div>
+            <div className="">
+                <h1 className="text-4xl font-bold mb-2">Frequently Asked Questions</h1>
+                <h3 className=" text-lg mb-10">Here are some questions you might ask about our corporate event services</h3>
+                <div className="space-y-4">
 
-            ))}
-        </div>
+                    {faq.map((item, index) => (
+                        <div key={index} className="collapse collapse-arrow bg-base-200">
+                            <input type="radio" name="my-accordion-2" checked="checked" />
+                            <div className="collapse-title text-xl font-medium">
+                                {item.question}
+                            </div>
+                            <div className="collapse-content">
+                                <p>{item.answer}</p>
+                            </div>
+                        </div>
+
+                    ))}
+                </div>
+            </div>
+        </section>
     );
 };
 
-export default Accordion;
+export default Faq;

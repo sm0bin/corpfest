@@ -4,41 +4,41 @@
     "name": "Conference Management",
     "image": "https://i.ibb.co/sWRrM66/19.jpg",
     "price": "$5,000 - $10,000",
-    "short_description": "We handle every aspect of your corporate conference, from venue selection to logistics, ensuring a seamless and successful event."
+    "description": "We handle every aspect of your corporate conference, from venue selection to logistics, ensuring a seamless and successful event."
   },
   {
     "id": 2,
     "name": "Product Launches",
     "image": "https://i.ibb.co/WDNk35j/7.jpg",
     "price": "$8,000 - $15,000",
-    "short_description": "Make a splash in the market with our product launch expertise. We create memorable events that leave a lasting impression on your audience."
+    "description": "Make a splash in the market with our product launch expertise. We create memorable events that leave a lasting impression on your audience."
   },
   {
     "id": 3,
     "name": "Corporate Event Video and Photography",
     "image": "https://i.ibb.co/L8grYjG/1.jpg",
     "price": "$4,000 - $9,000",
-    "short_description": "Capture the essence of your corporate event with our professional video and photography services. High-quality visuals for lasting memories."
+    "description": "Capture the essence of your corporate event with our professional video and photography services. High-quality visuals for lasting memories."
   },
   {
     "id": 4,
     "name": "Team Building Workshops",
     "image": "https://i.ibb.co/5YY5SDx/3.jpg",
     "price": "$3,000 - $7,000",
-    "short_description": "Boost team morale and productivity with our engaging team-building workshops. We offer customized activities tailored to your company's goals."
+    "description": "Boost team morale and productivity with our engaging team-building workshops. We offer customized activities tailored to your company's goals."
   },
   {
     "id": 5,
     "name": "Seminar and Workshop Hosting",
     "image": "https://i.ibb.co/0tfW6Vn/11.jpg",
     "price": "$4,000 - $8,000",
-    "short_description": "Host informative and engaging seminars and workshops with our professional support. We handle logistics, AV, and more."
+    "description": "Host informative and engaging seminars and workshops with our professional support. We handle logistics, AV, and more."
   },
   {
     "id": 6,
     "name": "Corporate Hall Decoration and Management",
     "image": "https://i.ibb.co/Wc6CPw7/16.jpg",
     "price": "$3,500 - $7,500",
-    "short_description": "Transform your corporate event venue with stunning decorations and expert management. Elevate your event ambiance."
+    "description": "Transform your corporate event venue with stunning decorations and expert management. Elevate your event ambiance."
   }
 ]
