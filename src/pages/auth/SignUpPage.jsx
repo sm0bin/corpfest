@@ -50,7 +50,7 @@ const SignUpPage = () => {
     }
 
     return (
-        <div className='w-2/5 shadow-md mx-auto mt-16 p-16 rounded'>
+        <div className='w-full md:w-1/4 lg:shadow-md mx-auto mt-16 p-4 md:p-12 rounded'>
             <Toaster />
             <form onSubmit={handleRegister} className="card-body p-0">
                 <div className="form-control">

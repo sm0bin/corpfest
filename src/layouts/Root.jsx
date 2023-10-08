@@ -5,8 +5,8 @@ import Footer from "../pages/shared/Footer";
 const Root = () => {
     return (
         <>
-            <div className="max-w-7xl mx-auto min-h-[calc(100vh-3rem)] font-poppins">
-                <Header></Header>
+            <Header></Header>
+            <div className="min-h-screen">
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>

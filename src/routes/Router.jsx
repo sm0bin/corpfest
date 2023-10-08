@@ -7,6 +7,7 @@ import PrivateRoute from "./PrivateRoute";
 import Home from "../pages/Home";
 import ErrorPage from "../pages/ErrorPage";
 import ServiceDetails from "../pages/shared/ServiceDetails";
+import About from "../pages/About";
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
             {
                 path: "/sign-up",
                 element: <SignUpPage></SignUpPage>,
+            },
+            {
+                path: "/about",
+                element: <PrivateRoute><About></About></PrivateRoute>,
             },
             {
                 path: "/profile",

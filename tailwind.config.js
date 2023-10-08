@@ -8,11 +8,7 @@ export default {
     extend: {
       fontFamily: {
         poppins: "'Poppins', sans-serif",
-      },
-      listStyleImage: {
-        checkmark: 'url("/check-circle.svg")',
-        xmark: 'url("/x-circle.svg")',
-      },
+      }
     },
   },
   plugins: [require("daisyui")],

@@ -13,10 +13,10 @@ const ServiceDetails = () => {
 
 
     return (
-        <section>
+        <section className="max-w-7xl mx-4 lg:mx-auto">
 
 
-            <div className="grid grid-cols-3 gap-6 my-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-6 lg:gap-6 my-8">
 
                 <div className="col-span-2 carousel w-full rounded-md">
                     {featured_images.map((image, index) => (

@@ -8,7 +8,7 @@ const Profile = () => {
 
 
     return (
-        <div>
+        <section className="max-w-7xl mx-4 lg:mx-auto">
             <div className="flex flex-col justify-center h-[calc(100vh-8rem)] gap-y-6">
                 <div className="">
                     <img className="h-96 w-96 rounded-md object-cover" src={photoURL ? photoURL : "/user.jpg"} alt="" />
@@ -22,7 +22,7 @@ const Profile = () => {
 
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

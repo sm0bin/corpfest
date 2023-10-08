@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Carousel = () => {
     const heroContent = [
@@ -38,19 +39,21 @@ const Carousel = () => {
             <div className="carousel w-full">
                 {heroContent.map((item, index) => (
                     <div key={index} id={item.id} className="carousel-item relative w-full text-white">
-                        <div className="hero min-h-[calc(70vh)]" style={{ backgroundImage: `url(${item.img})` }}>
+                        <div className="hero min-h-[80vh]" style={{ backgroundImage: `url(${item.img})` }}>
                             <div className="hero-overlay bg-base-500/70"></div>
-                            <div className="hero-content text-center text-neutral-content">
-                                <div className="max-w-md">
+                            <div className="hero-content max-w-full text-center text-neutral-content">
+                                <div className="">
                                     <h1 className="mb-5 text-5xl font-bold">{item.headline}</h1>
                                     <p className="mb-5">{item.details}</p>
-                                    <button className="px-8 py-4 rounded-lg text-white bg-rose-500 hover:bg-rose-600">Get Started</button>
+                                    <Link to="sign-up">
+                                        <button className="px-8 py-4 rounded-lg text-white bg-rose-500 hover:bg-rose-600">Get Started</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                            <a href={`#${item.id === 1 ? 5 : item.id - 1}`} className="btn btn-circle">❮</a>
-                            <a href={`#${item.id === 5 ? 1 : item.id + 1}`} className="btn btn-circle">❯</a>
+                            <a href={`#${item.id === 1 ? 5 : item.id - 1}`} className="btn btn-circle bg-opacity-0 text-white">❮</a>
+                            <a href={`#${item.id === 5 ? 1 : item.id + 1}`} className="btn btn-circle bg-opacity-0 text-white">❯</a>
 
                         </div>
                     </div>
