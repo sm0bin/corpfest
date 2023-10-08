@@ -96,7 +96,7 @@ console.log(sayHi());
 
 #### Answer: B
 
-<i>If a function is called with missing arguments, the missing values are set to "undefined". Here, "sayHi()" is called without any arguments. As a result, the function returns the string "Hi there, undefined", where "undefined" is the value of the "name" parameter inside the function.</i>
+<i>If a function is called with missing arguments, the missing values are set to "undefined". When "sayHi()" is called without any arguments, the value of the "name" parameter is set to undefined, resulting in the function returning 'Hi there, undefined.'</i>
 
 </p>
 </details>
