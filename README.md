@@ -35,14 +35,6 @@ Welcome to the CorpFest event management website repository! This web applicatio
 
 - Learn more about CorpFest, our mission, values, and what sets us apart in the event management industry.
 
-### Visit the Live Page
+## Visit the Live Page
 
-- Ready to experience CorpFest? Visit the live website [here](#insert-live-link).
-
-## Getting Started
-
-1. Clone this repository to your local machine.
-
-```bash
-git clone https://github.com/your-username/CorpFest-Website.git
-```
+- Ready to experience CorpFest? Visit the live website [CorpFest](#insert-live-link).
