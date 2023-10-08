@@ -1,6 +1,8 @@
 # CorpFest Website
 
-Welcome to the CorpFest event management website repository! This web application is designed to help businesses and organizations plan and execute successful corporate events. Below, you'll find information about the website's features and how to use them.
+Welcome to the CorpFest event management website repository! This web application is designed to help businesses and organizations plan and execute successful corporate events. Below, you'll find information about the website's features.
+
+---
 
 ## Features
 
@@ -13,14 +15,10 @@ Welcome to the CorpFest event management website repository! This web applicatio
 
 - Find comprehensive details about our event management services, including what each package includes, pricing, and additional options.
 
-### Responsive Design
-
-- The CorpFest website is built with a responsive design to ensure a seamless experience on various devices, from desktop to mobile.
-
 ### User Authentication
 
 - Sign up for an account to access exclusive features.
-- Log in with your credentials or use the convenient "Login with Google" option for quick access.
+- Log in with your credentials or use the convenient "Continue with Google" option for quick access.
 
 ### FAQs
 
@@ -29,11 +27,16 @@ Welcome to the CorpFest event management website repository! This web applicatio
 ### User Profile
 
 - After logging in, access your user profile to manage your account details and preferences.
-- View your event booking history and keep track of your upcoming events.
 
-### About Us Section
+### About Us
 
 - Learn more about CorpFest, our mission, values, and what sets us apart in the event management industry.
+
+### Responsive Design
+
+- The CorpFest website is built with a responsive design to ensure a seamless experience on various devices, from desktop to mobile.
+
+---
 
 ## Visit the Live Page
 
