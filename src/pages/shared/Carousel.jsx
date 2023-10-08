@@ -39,7 +39,7 @@ const Carousel = () => {
             <div className="carousel w-full">
                 {heroContent.map((item, index) => (
                     <div key={index} id={item.id} className="carousel-item relative w-full text-white">
-                        <div className="hero min-h-[80vh]" style={{ backgroundImage: `url(${item.img})` }}>
+                        <div className="hero min-h-screen" style={{ backgroundImage: `url(${item.img})` }}>
                             <div className="hero-overlay bg-base-500/70"></div>
                             <div className="hero-content max-w-full text-center text-neutral-content">
                                 <div className="">
