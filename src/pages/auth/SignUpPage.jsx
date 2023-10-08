@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
 const SignUpPage = () => {
     const { signUpUser, updateUser, googleSignIn } = useContext(AuthContext);
-    const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=.*[!])(?!.*\s).{8,}$/;
+    const [singUpError, setSignUpError] = useState("");
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -15,9 +15,28 @@ const SignUpPage = () => {
         const imgUrl = formData.get('img-url');
         const email = formData.get('email');
         const password = formData.get('password');
-        if (!passwordPattern.test(password)) {
-            console.log("in");
 
+        setSignUpError("");
+
+        if (password.length < 6) {
+            setSignUpError('Password must be at least 6 characters long.');
+            return;
+        }
+        else if (!/[a-z]/.test(password)) {
+            setSignUpError('Password must contain at least one lowercase letter.');
+            return;
+        }
+        else if (!/[A-Z]/.test(password)) {
+            setSignUpError('Password must contain at least one uppercase letter.');
+            return;
+        }
+        else if (!/[0-9]/.test(password)) {
+            setSignUpError('Password must contain at least one number.');
+            return;
+        }
+        else if (!/[!@#$%^&*()+=]/.test(password)) {
+            setSignUpError('Password must contain at least one special character.');
+            return;
         }
         console.log(name, imgUrl, email, password);
 
@@ -25,20 +44,23 @@ const SignUpPage = () => {
             .then(result => {
                 updateUser(name, imgUrl)
                     .then(result => {
-                        console.log(result.user);
+                        console.log(result);
                     })
                     .catch(error => {
                         console.log(error);
+                        setSignUpError(error.message);
                     })
                 toast.success('Sign Up Successful.')
                 console.log(result.user);
             })
             .catch(error => {
                 console.log(error);
+                setSignUpError(error.message);
             })
     }
 
     const handleGoogleSignIn = () => {
+        singUpError("");
         googleSignIn()
             .then(result => {
                 toast.success('Sign Up Successful.')
@@ -77,6 +99,9 @@ const SignUpPage = () => {
                     </label>
                     <input type="password" name='password' placeholder="Password" className="input input-bordered" required />
                 </div>
+                {
+                    singUpError && <p className='mt-4 font-medium text-rose-500'>{singUpError}</p>
+                }
                 <div className="form-control my-6">
                     <button className="btn normal-case font-medium text-lg bg-rose-500 hover:bg-rose-600 text-white ">Sign Up</button>
                 </div>

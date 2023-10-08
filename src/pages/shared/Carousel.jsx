@@ -35,7 +35,7 @@ const Carousel = () => {
     ]
 
     return (
-        <div>
+        <section>
             <div className="carousel w-full">
                 {heroContent.map((item, index) => (
                     <div key={index} id={item.id} className="carousel-item relative w-full text-white">
@@ -60,7 +60,7 @@ const Carousel = () => {
                 ))
                 }
             </div>
-        </div>
+        </section>
     );
 };
 

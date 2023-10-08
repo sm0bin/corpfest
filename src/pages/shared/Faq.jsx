@@ -22,7 +22,7 @@ const Faq = () => {
     ]
 
     return (
-        <section className="my-24 grid grid-cols-1 lg:grid-cols-2">
+        <section data-aos="fade-up" data-aos-duration="2000" className="my-24 grid grid-cols-1 lg:grid-cols-2">
             <div className="flex h-full items-center justify-center">
                 <img className="w-10/12" src={faqImage} alt="" />
             </div>

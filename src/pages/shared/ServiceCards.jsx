@@ -12,14 +12,14 @@ const ServiceCards = () => {
 
 
     return (
-        <section>
+        <section data-aos="fade-up" data-aos-duration="2000">
             <h1 className="text-4xl font-bold text-center mt-24 mb-12">Our Services</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 {
 
                     services.map(service => (
-                        <div key={service.id} className="card card-compact bg-base-100 shadow-md">
+                        <div data-aos="zoom-in" key={service.id} className="card card-compact bg-base-100 shadow-md">
                             <figure><img src={service.thumbnail} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title text-2xl">{service.name}</h2>

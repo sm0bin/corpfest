@@ -1,7 +1,7 @@
 
 const Stat = () => {
     return (
-        <div className="stats shadow-md w-full mt-24">
+        <section data-aos="flip-up" className="stats shadow-md w-full mt-24">
 
             <div className="stat p-8 text-center space-y-2">
                 <div className="stat-title text-xl font-medium">Total Events</div>
@@ -20,7 +20,7 @@ const Stat = () => {
             </div>
 
 
-        </div>
+        </section>
     );
 };
 

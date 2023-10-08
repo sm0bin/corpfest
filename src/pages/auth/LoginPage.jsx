@@ -1,10 +1,11 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
 const LoginPage = () => {
     const { signInUser, googleSignIn } = useContext(AuthContext);
+    const [loginError, setLoginError] = useState("");
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -14,6 +15,7 @@ const LoginPage = () => {
         const email = formData.get('email');
         const password = formData.get('password');
         console.log(email, password);
+        setLoginError("");
 
         signInUser(email, password)
             .then(result => {
@@ -24,11 +26,13 @@ const LoginPage = () => {
             })
             .catch(error => {
                 console.log(error);
+                setLoginError(error.message);
             })
     }
 
 
     const handleGoogleSignIn = () => {
+        setLoginError("");
         googleSignIn()
             .then(result => {
                 toast.success('Login Successful.')
@@ -56,6 +60,9 @@ const LoginPage = () => {
                     </label>
                     <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                 </div>
+                {
+                    loginError && <p className='mt-4 font-medium text-rose-500'>{loginError}</p>
+                }
                 <div className="form-control my-6">
                     <button className="btn normal-case font-medium text-lg bg-rose-500 hover:bg-rose-600 text-white ">Login</button>
                 </div>
