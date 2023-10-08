@@ -5,7 +5,7 @@ const ServiceCards = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch("services2.json")
+        fetch("services.json")
             .then((res) => res.json())
             .then(data => setServices(data))
     }, [])
@@ -26,7 +26,7 @@ const ServiceCards = () => {
                                 <h2 className="card-title text-lg">Price Range: <span className="text-rose-600">{service.price}</span></h2>
                                 <p className="text-base">{service.description}</p>
                                 <div className="card-actions mt-4">
-                                    <Link className="w-full" to={`/service/${service.id}`}><button className="py-4 text-lg rounded-md bg-rose-500 hover:bg-rose-600 text-white w-full">See Details</button></Link>
+                                    <Link className="w-full" to={`/service/${service.id}`}><button className="py-3 text-lg rounded-md bg-rose-500 hover:bg-rose-600 text-white w-full">See Details</button></Link>
                                 </div>
                             </div>
                         </div>

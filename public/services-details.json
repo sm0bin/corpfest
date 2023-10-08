@@ -4,7 +4,7 @@
     "name": "Conference Management",
     "thumbnail": "https://i.ibb.co/sWRrM66/19.jpg",
     "price": "$5,000 - $10,000",
-    "description": "We handle every aspect of your corporate conference, from venue selection to logistics, ensuring a seamless and successful event.",
+    "description": "Our comprehensive conference management service takes care of every aspect of your corporate event. From meticulously selecting the perfect venue to managing logistics, coordinating speakers, creating a well-structured event schedule, and ensuring flawless on-site management, we guarantee a seamless and successful conference experience.",
     "features": [
       "Venue selection and booking",
       "Logistics and transportation",
@@ -12,10 +12,7 @@
       "Event scheduling",
       "On-site management"
     ],
-    "not_included_features": [
-      "Catering services",
-      "Audio-visual equipment rental"
-    ],
+    "exclusions": ["Catering services", "Audio-visual equipment rental"],
     "featured_images": [
       "https://i.ibb.co/5YY5SDx/3.jpg",
       "https://i.ibb.co/qJFwgV8/4.jpg",
@@ -28,7 +25,7 @@
     "name": "Product Launches",
     "thumbnail": "https://i.ibb.co/WDNk35j/7.jpg",
     "price": "$8,000 - $15,000",
-    "description": "Make a splash in the market with our product launch expertise. We create memorable events that leave a lasting impression on your audience.",
+    "description": "Elevate your product launch with our expertise. We specialize in creating memorable events that make a lasting impression on your audience. From concept development and event branding to flawlessly setting up product presentations, crafting effective marketing strategies, and engaging your target audience, we've got you covered.",
     "features": [
       "Concept development",
       "Event branding",
@@ -36,7 +33,7 @@
       "Marketing and promotion",
       "Audience engagement"
     ],
-    "not_included_features": ["Venue selection", "Catering services"],
+    "exclusions": ["Venue selection", "Catering services"],
     "featured_images": [
       "https://i.ibb.co/WDNk35j/7.jpg",
       "https://i.ibb.co/F5WQdH3/8.jpg",
@@ -49,7 +46,7 @@
     "name": "Corporate Event Video and Photography",
     "thumbnail": "https://i.ibb.co/L8grYjG/1.jpg",
     "price": "$4,000 - $9,000",
-    "description": "Capture the essence of your corporate event with our professional video and photography services. High-quality visuals for lasting memories.",
+    "description": "Capture the essence of your corporate event with our professional video and photography services. Our team excels in delivering high-quality visuals that will preserve the memories of your event for years to come. Our services include professional videography, photography coverage, editing and post-production, high-resolution images, and event highlight reels.",
     "features": [
       "Professional videography",
       "Photography coverage",
@@ -57,7 +54,7 @@
       "High-resolution images",
       "Event highlight reel"
     ],
-    "not_included_features": ["Event planning", "Audio equipment rental"],
+    "exclusions": ["Event planning", "Audio equipment rental"],
     "featured_images": [
       "https://i.ibb.co/L8grYjG/1.jpg",
       "https://i.ibb.co/LSxBBSh/2.jpg",
@@ -70,7 +67,7 @@
     "name": "Team Building Workshops",
     "thumbnail": "https://i.ibb.co/5YY5SDx/3.jpg",
     "price": "$3,000 - $7,000",
-    "description": "Boost team morale and productivity with our engaging team-building workshops. We offer customized activities tailored to your company's goals.",
+    "description": "Boost team morale and productivity with our engaging team-building workshops. We offer customized activities tailored to your company's goals. Our services include customized team activities, professional facilitators, team bonding exercises, skill-building workshops, and interactive learning experiences.",
     "features": [
       "Customized team activities",
       "Professional facilitators",
@@ -78,7 +75,7 @@
       "Skill-building workshops",
       "Interactive learning"
     ],
-    "not_included_features": ["Event decoration", "Audio-visual equipment"],
+    "exclusions": ["Event decoration", "Audio-visual equipment"],
     "featured_images": [
       "https://i.ibb.co/5YY5SDx/3.jpg",
       "https://i.ibb.co/qJFwgV8/4.jpg",
@@ -91,7 +88,7 @@
     "name": "Seminar and Workshop Hosting",
     "thumbnail": "https://i.ibb.co/0tfW6Vn/11.jpg",
     "price": "$4,000 - $8,000",
-    "description": "Host informative and engaging seminars and workshops with our professional support. We handle logistics, AV, and more.",
+    "description": "Host informative and engaging seminars and workshops with our professional support. We handle logistics, AV setup, speaker coordination, interactive workshop design, and participant engagement to ensure your events are a success.",
     "features": [
       "Event logistics planning",
       "Audio-visual setup",
@@ -99,7 +96,7 @@
       "Interactive workshop design",
       "Participant engagement"
     ],
-    "not_included_features": ["Event decoration", "Catering services"],
+    "exclusions": ["Event decoration", "Catering services"],
     "featured_images": [
       "https://i.ibb.co/b3pDQXN/10.jpg",
       "https://i.ibb.co/0tfW6Vn/11.jpg",
@@ -112,7 +109,7 @@
     "name": "Corporate Hall Decoration and Management",
     "thumbnail": "https://i.ibb.co/Wc6CPw7/16.jpg",
     "price": "$3,500 - $7,500",
-    "description": "Transform your corporate event venue with stunning decorations and expert management. Elevate your event ambiance.",
+    "description": "Transform your corporate event venue with stunning decorations and expert management. Elevate your event ambiance to create a memorable experience. Our services include venue decoration, theme-based decor, event logistics, ambiance enhancement, and on-site management.",
     "features": [
       "Venue decoration",
       "Theme-based decor",
@@ -120,7 +117,7 @@
       "Ambiance enhancement",
       "On-site management"
     ],
-    "not_included_features": ["Catering services", "Audio-visual equipment"],
+    "exclusions": ["Catering services", "Audio-visual equipment"],
     "featured_images": [
       "https://i.ibb.co/FsmHyWM/15.jpg",
       "https://i.ibb.co/Wc6CPw7/16.jpg",
