@@ -1,11 +1,12 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useContext, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
 const SignUpPage = () => {
-    const { signUpUser, updateUser, googleSignIn } = useContext(AuthContext);
+    const { signUpUser, updateUser, googleSignIn, signOutUser } = useContext(AuthContext);
     const [singUpError, setSignUpError] = useState("");
+    const navigate = useNavigate();
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -38,19 +39,27 @@ const SignUpPage = () => {
             setSignUpError('Password must contain at least one special character.');
             return;
         }
-        console.log(name, imgUrl, email, password);
 
         signUpUser(email, password)
             .then(result => {
                 updateUser(name, imgUrl)
                     .then(result => {
                         console.log(result);
+                        toast.success('Sign Up Successful.')
+                        signOutUser()
+                            .then(result => {
+                                navigate("/login");
+                                console.log(result);
+                            })
+                            .catch(error => {
+                                console.log(error);
+                            })
+                        e.target.reset();
                     })
                     .catch(error => {
                         console.log(error);
                         setSignUpError(error.message);
                     })
-                toast.success('Sign Up Successful.')
                 console.log(result.user);
             })
             .catch(error => {
@@ -60,10 +69,10 @@ const SignUpPage = () => {
     }
 
     const handleGoogleSignIn = () => {
-        singUpError("");
+        setSignUpError("");
         googleSignIn()
             .then(result => {
-                toast.success('Sign Up Successful.')
+                toast.success('Sign Up Successful.');
                 console.log(result.user);
             })
             .catch(error => {

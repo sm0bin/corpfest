@@ -44,7 +44,7 @@ const Carousel = () => {
                             <div className="hero-content max-w-full text-center text-neutral-content">
                                 <div className="">
                                     <h1 className="mb-5 text-5xl font-bold">{item.headline}</h1>
-                                    <p className="mb-5">{item.details}</p>
+                                    <p className="mb-5 max-w-2xl">{item.details}</p>
                                     <Link to="sign-up">
                                         <button className="px-8 py-4 rounded-lg text-white bg-rose-500 hover:bg-rose-600">Get Started</button>
                                     </Link>

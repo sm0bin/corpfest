@@ -20,7 +20,7 @@ const LoginPage = () => {
         signInUser(email, password)
             .then(result => {
                 console.log(result.user);
-                toast.success('Login Successful.')
+                toast.success('Login Successful.');
                 navigate(location?.state ? location.state : '/');
 
             })
