@@ -40,4 +40,4 @@ Welcome to the CorpFest event management website repository! This web applicatio
 
 ## Visit the Live Page
 
-- Ready to experience CorpFest? Visit the live website [CorpFest](#insert-live-link).
+- Ready to experience CorpFest? Visit the live website [CorpFest](https://corpfest-d370d.web.app/).
