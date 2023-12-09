@@ -38,6 +38,12 @@ Welcome to the CorpFest event management website repository! This web applicatio
 
 ---
 
+## Technology
+
+[![My Skills](https://skillicons.dev/icons?i=react,tailwind,firebase)](https://skillicons.dev)
+
+---
+
 ## Visit the Live Page
 
 - Ready to experience CorpFest? Visit the live website [CorpFest](https://corpfest-d370d.web.app/).
